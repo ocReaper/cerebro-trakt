@@ -1,7 +1,7 @@
 {
   "name": "cerebro-trakt",
   "version": "0.0.1",
-  "description": "Cerebro plugin to find films on trakt.tv",
+  "description": "Cerebro plugin to find movies and shows on trakt.tv",
   "license": "MIT",
   "repository": "ocReaper/cerebro-trakt",
   "author": {
