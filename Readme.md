@@ -2,7 +2,7 @@
 
 > [Cerebro](http://www.cerebroapp.com) plugin to find films on trakt.tv
 
-![](screenshot.PNG)
+![](screenshot.png)
 
 
 ## Usage
