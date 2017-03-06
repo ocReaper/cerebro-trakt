@@ -1,87 +1,174 @@
-.traktPreview {
-  align-self: flex-start;
+.summary-wrapper {
+  background-color: --main-background-color;
+  background-size: cover;
+  background-position: 50% 10%;
+  transition: all .5s;
+  height: 200px;
+  color: --main-font-color;
+  position: relative;
 }
 
-.traktHeader::after {
-  content: "";
-  display: block;
-  clear: both;
+.summary-wrapper .summary {
+  height: 100%;
+  position: relative;
+  bottom: 70px;
 }
 
-.traktTitle {
-  font-size: 1.3em;
-  margin-bottom: 15px;
-  width: 75%;
-  margin-right: 5px;
-  float: left;
+.summary-wrapper .summary .container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0
 }
 
-.traktRating {
-  color: var(--secondary-font-color);
-  font-size: .75em;
-}
-.traktRatingNumber {
-  font-size: 2em;
-  color: var(--main-font-color);
+.summary-wrapper .summary .container h1 {
+  margin: 0;
+  text-shadow: 0 0 20px black;
+  line-height: 1.2
 }
 
-.traktMeta {
-  color: var(--secondary-font-color);
-  font-size: .8em;
-  margin: 10px 0;
+.summary-wrapper .summary .container h1 .year {
+  font-size: 25px;
+  color: --secondary-font-color;
 }
 
-.traktMeta > span:first-child::before {
-  display: none;
+.summary-wrapper .summary .container h1 .certification {
+  margin-left: 10px
 }
 
-.traktMeta > span::before {
-  content: "|";
-  color: var(--secondary-font-color);
-  margin: 0px 5px;
+.summary-wrapper .summary .container .certification {
+  display: inline-block;
+  border: solid 1px #fff;
+  font-size: 12px;
+  padding: 2px 4px 1px 4px;
+  border-radius: 2px;
+  vertical-align: middle;
+  font-weight: 600;
+  transition: all .5s;
+  cursor: pointer
 }
 
-.traktMain {
+.summary-wrapper .summary .container .certification:hover {
+  background-color: #fff;
+  color: --main-font-color;
+}
+
+.info-wrapper {
+  min-height: 100px;
+}
+
+.info-wrapper .sidebar.affixable.affix-bottom {
+  position: relative !important;
+  width: 173px;
+  top: -104px;
+}
+
+.info-wrapper .sidebar .poster {
+  border: solid 3px #fff !important;
+  position: relative;
+  -webkit-box-shadow: 0 0 20px 0px #666666;
+  box-shadow: 0 0 20px 0px #666666
+}
+
+.info-wrapper .sidebar .poster img {
+  width: 100%
+}
+
+.info-wrapper ul.additional-stats {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 20px 0
+}
+
+.info-wrapper ul.additional-stats li {
+  display: inline-block;
+  margin: 0 20px 2px 0
+}
+
+.info-wrapper ul.additional-stats li label {
+  text-transform: uppercase;
+  margin: 0 7px 0 0;
+  font-weight: 600;
+  color: --secondary-font-color;
+}
+
+.info-wrapper ul.additional-stats li a {
+  text-decoration: none;
+  transition: all .5s
+}
+
+.info-wrapper .info {
+  margin: 20px 0
+}
+
+.info-wrapper .info #tagline {
   margin-bottom: 10px;
-  font-size: .9em;
-  line-height: 150%;
-}
-.traktMain::after {
-  display: block;
-  clear: both;
-  content: "";
+  font-style: italic;
 }
 
-.traktPoster {
-  float: left;
-  max-width: 182px;
-  margin-right: 10px;
+.info-wrapper .info #overview {
+  margin: 0 0 20px 0
 }
 
-
-.traktYear {
-  margin-left: 5px;
-  font-size: .95em;
-  color: var(--secondary-font-color);
+.summary-ratings-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(168, 25, 24);
 }
 
-.traktDetails {
-  font-size: .9em;
+.summary-ratings-wrapper .container {
+  height: 60px;
+  padding-top: 15px
 }
-.traktDetails dt {
-  float: left;
-  width: 75px;
-  padding: 0;
+
+.summary-ratings-wrapper ul {
+  display: inline-block;
+  list-style: none;
   margin: 0;
-  text-align: left;
-  margin-right: 2%;
-  color: var(--secondary-font-color);
+  padding: 0
 }
 
-.traktDetails dd {
-  float: left;
-  width: 75%;
+.summary-ratings-wrapper ul.stats {
+  margin-left: 30px
+}
+
+.summary-ratings-wrapper ul li {
+  display: inline-block;
+  margin: 0 30px 0 0;
   padding: 0;
-  margin: 0;
-  text-align: left;
+  min-width: 0px;
+  transition: all .6s
+}
+
+.summary-ratings-wrapper ul li:last-child {
+  margin-right: 0
+}
+
+.summary-ratings-wrapper ul li .icon {
+  float: left;
+  font-size: 30px;
+  vertical-align: top;
+  text-shadow: 0 0 20px black;
+  margin-right: 7px
+}
+
+.summary-ratings-wrapper ul li .icon.rating-8 {
+  color: --main-font-color
+}
+
+.summary-ratings-wrapper ul li .number {
+  float: left;
+  line-height: 1;
+  color: --main-font-color
+}
+
+.summary-ratings-wrapper ul li .number .rating {
+  font-weight: 700;
+  font-size: 18px
+}
+
+.summary-ratings-wrapper ul li .number .votes {
+  font-size: 12px;
+  color: --secondary-font-color
 }
