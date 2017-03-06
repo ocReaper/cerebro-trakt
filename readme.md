@@ -1,5 +1,7 @@
 # cerebro-trakt
 
+[![npm version](https://badge.fury.io/js/cerebro-trakt.svg)](https://badge.fury.io/js/cerebro-trakt)
+
 > [Cerebro](http://www.cerebroapp.com) plugin to find movies and shows on trakt.tv
 
 ![](screenshot.png)
