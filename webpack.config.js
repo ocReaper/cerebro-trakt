@@ -20,12 +20,16 @@ module.exports = {
     target: 'electron-renderer',
     module: {
         rules: [{
-            test: /\.jsx?$/,
-            loader: 'babel-loader',
-            exclude: /node_modules/,
-            query: {
-                presets: ['es2015']
+            test: [/package$/, /package.json$/, /\.json$/],
+            use: {
+                loader: 'json-loader'
             }
+        }, {
+            test: /\.jsx?$/,
+            use: {
+                loader: 'babel-loader'
+            },
+            exclude: /node_modules/
         }, {
             test: /\.css$/,
             use: [{
@@ -39,10 +43,6 @@ module.exports = {
         }, {
             test: /\.png$/,
             loader: 'url-loader'
-        }, {
-            test: [/package$/, /package.json$/],
-            use: 'json-loader'
-        }
-        ]
+        }]
     }
 };
