@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 symlink="${HOME}/AppData/Roaming/Cerebro/plugins/node_modules/${PWD##*/}"
+./node_modules/.bin/webpack
 ln -s "${PWD}" "$symlink"
-trap "rm \"$symlink\"" SIGHUP SIGINT SIGTERM
-./node_modules/.bin/webpack --watch
+trap "rm -rf \"$symlink\"" SIGHUP SIGINT SIGTERM
